@@ -11,7 +11,7 @@ def NewtonsMethod(f,x0,M,TOL):
     while abs(f.subs(x,x0)) > TOL and i<M: 
         
         y0 = f.subs(x,x0); #Function evaluation at xn
-        yp = diff(f,x) #Derivative of the funcation
+        yp = diff(f,x) #Derivative of the function
         x1 = x0 - y0/yp.subs(x,x0); # Newtons algorithm for xn1
         
         x0 = x1;
